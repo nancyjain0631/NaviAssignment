@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PullRequestCell" rowHeight="148" id="apS-B9-gM7" customClass="ClosedPRTableViewCell" customModule="NaviAssignment" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PullRequestCell" rowHeight="148" id="apS-B9-gM7" customClass="ClosedPRTableViewCell" customModule="NaviAssignment1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="apS-B9-gM7" id="rdz-Ap-Hc9">
@@ -101,11 +101,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="closedDate" destination="m7f-Ln-8dq" id="5xb-Ap-oQz"/>
-                                            <outlet property="createdDate" destination="1du-ho-ED5" id="UwT-4K-WQz"/>
-                                            <outlet property="title" destination="KKs-Ri-JLk" id="ct3-Wy-3xL"/>
-                                            <outlet property="userImage" destination="U42-pw-iIn" id="xfn-5d-Vxn"/>
-                                            <outlet property="userName" destination="Gom-cJ-o9K" id="9B7-jX-NHE"/>
+                                            <outlet property="closedDate" destination="m7f-Ln-8dq" id="kEE-5E-CCb"/>
+                                            <outlet property="createdDate" destination="1du-ho-ED5" id="qxw-ak-bKO"/>
+                                            <outlet property="title" destination="KKs-Ri-JLk" id="I5r-Ka-XPc"/>
+                                            <outlet property="userImage" destination="U42-pw-iIn" id="dwO-Ye-k0t"/>
+                                            <outlet property="userName" destination="Gom-cJ-o9K" id="KH2-xc-3xc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -123,6 +123,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NrU-fm-I3l" secondAttribute="trailing" id="uU4-cQ-oe3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7Mo-zo-WlN" id="mPt-g6-Gxp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

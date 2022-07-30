@@ -9,7 +9,7 @@ import Foundation
 
 class ClosedPRViewModel {
     
-    var apiService = ApiService()
+    var apiService = ApiServices()
     var userDetails = [UserDetails]()
     
     func fetchClosedPR(completion: @escaping () -> ()) {

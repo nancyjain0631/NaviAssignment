@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PullRequestCell")
         loadClosedPullRequestData()
     }
-    
+
     private func loadClosedPullRequestData() {
         viewModel.fetchClosedPR { [weak self] in
             self?.tableView.dataSource = self
@@ -31,13 +32,13 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClosedPRTableViewCell", for: indexPath) as! ClosedPRTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PullRequestCell", for: indexPath) as! ClosedPRTableViewCell
         let userDetails = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(userDetails)
         return cell
     }
-    
-    
+
+
 }

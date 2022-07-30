@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApiService {
+class ApiServices {
     private var urlSessionDataTask: URLSessionDataTask?
     
     func getData(completion: @escaping (Result<[UserDetails], Error>) -> Void) {
