@@ -13,7 +13,7 @@ class ClosedPRViewModel {
     var userDetails = [UserDetails]()
     
     func fetchClosedPR(completion: @escaping () -> ()) {
-        apiService.getData { [weak self] (result) in
+        apiService.getData(pagination: false) { [weak self] (result) in
             switch result {
             case .success(let listOf):
                 self?.userDetails = listOf.reversed()

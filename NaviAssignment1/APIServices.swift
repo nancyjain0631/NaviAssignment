@@ -9,9 +9,12 @@ import Foundation
 
 class ApiServices {
     private var urlSessionDataTask: URLSessionDataTask?
-    
-    func getData(completion: @escaping (Result<[UserDetails], Error>) -> Void) {
-        let closedPullRequestsURL = "https://api.github.com/repos/facebook/react/pulls?state=closed"
+    var isPaginating: Bool = false
+    func getData(pagination: Bool = false, completion: @escaping (Result<[UserDetails], Error>) -> Void) {
+        if pagination {
+            isPaginating = true
+        }
+        let closedPullRequestsURL = "https://api.github.com/repos/manticoresoftware/manticoresearch/pulls?state=closed"
         guard let url = URL(string: closedPullRequestsURL) else { return }
 
         urlSessionDataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -44,6 +47,9 @@ class ApiServices {
                 }
             } catch let error{
                 completion(.failure(error))
+            }
+            if pagination {
+                self.isPaginating = false
             }
         }
         urlSessionDataTask?.resume()
