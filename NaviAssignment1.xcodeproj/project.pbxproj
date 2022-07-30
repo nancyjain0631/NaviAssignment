@@ -19,6 +19,7 @@
 		E6E9096728950FDE000B2CD7 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E9096628950FDE000B2CD7 /* APIServices.swift */; };
 		E6E909692895100B000B2CD7 /* ClosedPRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E909682895100B000B2CD7 /* ClosedPRViewModel.swift */; };
 		E6E9096B2895102F000B2CD7 /* ClosedPRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E9096A2895102F000B2CD7 /* ClosedPRModel.swift */; };
+		E6E9096D289510B4000B2CD7 /* ClosedPRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E9096C289510B4000B2CD7 /* ClosedPRTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E6E9096628950FDE000B2CD7 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		E6E909682895100B000B2CD7 /* ClosedPRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRViewModel.swift; sourceTree = "<group>"; };
 		E6E9096A2895102F000B2CD7 /* ClosedPRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRModel.swift; sourceTree = "<group>"; };
+		E6E9096C289510B4000B2CD7 /* ClosedPRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E6E9096628950FDE000B2CD7 /* APIServices.swift */,
 				E6E909682895100B000B2CD7 /* ClosedPRViewModel.swift */,
 				E6E9096A2895102F000B2CD7 /* ClosedPRModel.swift */,
+				E6E9096C289510B4000B2CD7 /* ClosedPRTableViewCell.swift */,
 			);
 			path = NaviAssignment1;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				E6E909692895100B000B2CD7 /* ClosedPRViewModel.swift in Sources */,
 				E6E9093B28950C05000B2CD7 /* ViewController.swift in Sources */,
+				E6E9096D289510B4000B2CD7 /* ClosedPRTableViewCell.swift in Sources */,
 				E6E9093728950C05000B2CD7 /* AppDelegate.swift in Sources */,
 				E6E9096B2895102F000B2CD7 /* ClosedPRModel.swift in Sources */,
 				E6E9096728950FDE000B2CD7 /* APIServices.swift in Sources */,
