@@ -23,8 +23,8 @@ class ClosedPRTableViewCell: UITableViewCell {
     private func updateUI(title: String?, created_at: String?, closed_at: String?, login: String?, avatar_url: String ) {
         self.title.text = title
         self.userName.text = login
-        self.createdDate.text = created_at
-        self.closedDate.text = closed_at
+        self.createdDate.text = convertDateFormatter(created_at)
+        self.closedDate.text = convertDateFormatter(closed_at)
 //        self.userImage.image = UIImage(avatar_url)
         guard let userImageURL = URL(string: avatar_url) else {
             self.userImage.image = UIImage(named: "noImageAvailable")
@@ -51,5 +51,18 @@ class ClosedPRTableViewCell: UITableViewCell {
                 }
             }
         }.resume()
+    }
+    // Convert Date format
+    func convertDateFormatter(_ date: String?) -> String {
+        var fixDate = ""
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let oldDate = date {
+            if let newDate = dateFormatter.date(from: oldDate) {
+                dateFormatter.dateFormat = "dd.MM.yyyy"
+                fixDate = dateFormatter.string(from: newDate)
+            }
+        }
+        return fixDate
     }
 }
